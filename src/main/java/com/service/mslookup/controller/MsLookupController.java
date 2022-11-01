@@ -11,7 +11,9 @@ public class MsLookupController {
 
   @Operation(summary = "Put your endpoint description for swagger here. Do this for each endpoint.")
 	@GetMapping("/")
-  public void placeHolder() {
-  }
+		public String placeHolder() {
+		return "hello ms-lookup" + new Date().getTime();
+	}
+
 
 }
