@@ -1,14 +1,5 @@
 ####
 # Microservice1 dockerfile
-# This Dockerfile is used in order to build a container that runs the Spring Boot application
-#
-# Build the image with:
-#
-# docker build -f docker/Dockerfile -t springboot/sample-demo .
-#
-# Then run the container using:
-#
-# docker run -i --rm -p 8081:8081 springboot/sample-demo
 ####
 FROM quay.io/devfile/maven:3.8.1-openjdk-17-slim
 
@@ -22,6 +13,6 @@ COPY src src
 RUN mvn package -Dmaven.test.skip=true
 
 FROM openjdk:11-jdk
-COPY --from=0 /build/target/sampleService11.jar /app/target/sampleService11.jar
+COPY --from=0 /build/target/ms-lookup.jar /app/target/ms-lookup.jar
 
-ENTRYPOINT [ "java", "-jar", "/app/target/sampleService11.jar"]
+ENTRYPOINT [ "java", "-jar", "/app/target/ms-lookup.jar"]
