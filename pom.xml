@@ -10,6 +10,7 @@
 	</parent>
 
 	<!-- Microservice information -->
+	<artifactId>sample-service</artifactId>
 	<groupId>com.service</groupId>
 	<version>0.0.1</version>
 
