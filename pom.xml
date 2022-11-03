@@ -17,6 +17,9 @@
 
 
 	<!-- Required java version. -->
+	<properties>
+		<java.version>11</java.version>
+	</properties>
 
 	<dependencies>
 		<!-- Required -->
