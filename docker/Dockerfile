@@ -13,6 +13,6 @@ COPY src src
 RUN mvn package -Dmaven.test.skip=true
 
 FROM openjdk:11-jdk
-COPY --from=0 /build/target/ms-lookup.jar /app/target/ms-lookup.jar
+COPY --from=0 /build/target/ms-lookup-v3.jar /app/target/ms-lookup-v3.jar
 
-ENTRYPOINT [ "java", "-jar", "/app/target/ms-lookup.jar"]
+ENTRYPOINT [ "java", "-jar", "/app/target/ms-lookup-v3.jar"]
