@@ -1,4 +1,4 @@
-package com.service.models;
+package com.service.mslookup.models;
 
 
 
